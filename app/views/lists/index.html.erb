@@ -1,0 +1,8 @@
+<h1>Hello</h1>
+
+<table>
+  <tr><th>Listname</th></tr>
+  <% @lists.each do |list| %>
+    <tr><td><%= list.name %></td></tr>
+  <% end %>
+</table>
