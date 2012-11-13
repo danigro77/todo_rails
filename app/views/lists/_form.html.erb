@@ -1,10 +1,8 @@
-<%= form_for(@list) do |f| %>
-  <% @list.errors.full_messages.each do |msg| %>
-    <p><%= msg %></p>
-  <% end %>
+<%= form_for form_obj do |f| %>
+
 
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit "New list" %>
+  <%= f.submit button_name %>
 
 <% end %>

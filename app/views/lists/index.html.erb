@@ -1,4 +1,8 @@
+
 <h1>Hello</h1>
+<% @list.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
 
 <table>
   <tr><th>Listname</th></tr>
@@ -9,4 +13,4 @@
     </tr>
   <% end %>
 </table>
-<%= render :partial => 'form' %>
+<%= render 'form', :form_obj => @list, :button_name => 'New List' %>

@@ -8,7 +8,4 @@
     <li><%= item.name %> <%= button_to "Delete", list_item_path(@list.id, item.id ), :method => 'delete' %></li>
   <% end %>
 </ol>
-<%= form_for [@item.list, @item] do |f| %>
-<%= f.text_field :name %>
-<%= f.submit "New Item" %>
-<% end %>
+<%= render 'form', :form_obj => [@item.list, @item], :button_name => 'New Item' %>
