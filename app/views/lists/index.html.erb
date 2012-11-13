@@ -5,6 +5,7 @@
   <% @lists.each do |list| %>
     <tr>
       <td><%= link_to list.name, list %></td>
+      <td><%= button_to "Delete", list_path(list.id ), :method => 'delete' %></td>
     </tr>
   <% end %>
 </table>
