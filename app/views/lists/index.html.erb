@@ -6,4 +6,4 @@
     <tr><td><%= link_to list.name, list %></td></tr>
   <% end %>
 </table>
-<%= link_to "New List", new_list_path %>
+<%= render :partial => 'form' %>

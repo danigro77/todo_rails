@@ -1,13 +1,13 @@
 class ItemsController < ApplicationController
   def create
-    @item = Item.new(params[:item])
-    @item.list_id = params[:list_id]
+    @list = List.find(params[:list_id])
+    @item = @list.items.new(params[:item])
     logger.info { p @item }
     logger.info { p '-------------------------------------------------'}
     if @item.save
-      redirect_to list_path(@item.list.id)
+      redirect_to list_path(@list)
     else
-      render list_path(@item.list.id)
+      render 'lists/show'
     end
   end
 

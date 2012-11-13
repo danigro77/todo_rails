@@ -4,7 +4,7 @@
 <% end %>
 
 <ol>
-  <% @items.each do |item| %>
+  <% @list.items.each do |item| %>
     <li><%= item.name %></li>
   <% end %>
 </ol>
@@ -12,4 +12,3 @@
 <%= f.text_field :name %>
 <%= f.submit "New Item" %>
 <% end %>
-<!-- { :controller => "items",  :action => "create" }-->
