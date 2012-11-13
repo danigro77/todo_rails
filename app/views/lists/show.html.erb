@@ -5,7 +5,7 @@
 
 <ol>
   <% @list.items.each do |item| %>
-    <li><%= item.name %></li>
+    <li><%= item.name %> <%= button_to "Delete", list_item_path(@list.id, item.id ), :method => 'delete' %></li>
   <% end %>
 </ol>
 <%= form_for [@item.list, @item] do |f| %>

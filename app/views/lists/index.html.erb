@@ -3,7 +3,9 @@
 <table>
   <tr><th>Listname</th></tr>
   <% @lists.each do |list| %>
-    <tr><td><%= link_to list.name, list %></td></tr>
+    <tr>
+      <td><%= link_to list.name, list %></td>
+    </tr>
   <% end %>
 </table>
 <%= render :partial => 'form' %>
