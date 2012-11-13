@@ -3,7 +3,7 @@
 <table>
   <tr><th>Listname</th></tr>
   <% @lists.each do |list| %>
-    <tr><td><%= list.name %></td></tr>
+    <tr><td><%= link_to list.name, list %></td></tr>
   <% end %>
 </table>
 <%= link_to "New List", new_list_path %>

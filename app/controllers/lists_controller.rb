@@ -3,6 +3,12 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
+  def show
+     @list = List.find(params[:id])
+     @items = @list.items
+     @item = @list.items.new
+  end
+
   def new
     @list = List.new
   end
@@ -15,5 +21,6 @@ class ListsController < ApplicationController
       render :new
     end
   end
+
 
 end
